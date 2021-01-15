@@ -22,7 +22,7 @@ export class AddNewQuestion{
         // dservice.screen_size
         this.myForm=fb.group({
             question:["",[Validators.required,Validators.minLength(5)]],
-            Ans:["",[Validators.required,Validators.minLength(2)]]})
+            Ans:["",[Validators.required,Validators.minLength(1)]]})
 
     }
     add(data){
