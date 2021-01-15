@@ -1,0 +1,26 @@
+
+<br><br><br>
+
+<input type="text" class="form-control" placeholder="Search" 
+aria-label="Recipient's username" aria-describedby="basic-addon2"
+(keyup)="serach(i1)" #i1>
+
+
+
+
+<table  mat-table [dataSource]="Ds"  >
+    <ng-container matColumnDef="Question">
+        <th mat-header-cell *matHeaderCellDef>Question</th>
+        <td mat-cell *matCellDef="let el">{{el.question}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Ans" >
+        <th mat-header-cell *matHeaderCellDef>Answere</th>
+        <td mat-cell *matCellDef="let el" style="background-color: lightblue;">{{el.option}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnlist"></tr>
+    <tr mat-row *matRowDef="let row;columns: columnlist;"></tr> 
+</table>
+
+

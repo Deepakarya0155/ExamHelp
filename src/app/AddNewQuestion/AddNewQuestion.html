@@ -1,0 +1,13 @@
+<form class="example-form" [formGroup]="myForm" (ngSubmit)="add(myForm.value)">
+    <mat-form-field [ngStyle]="{'min-width':dservice.screen_size}">
+        <mat-label>Question</mat-label>
+        <textarea matInput placeholder="Question" [formControl]="myForm.controls['question']"></textarea>
+    </mat-form-field>
+    <br>
+    <mat-form-field [ngStyle]="{'min-width':dservice.screen_size}">
+      <mat-label>Answere</mat-label>
+      <input matInput placeholder="Answere" [formControl]="myForm.controls['Ans']">
+    </mat-form-field>
+    
+    <button mat-raised-button type="submit" mat-button color="primary">ADD</button>
+</form>
