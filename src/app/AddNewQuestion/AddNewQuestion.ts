@@ -28,9 +28,14 @@ export class AddNewQuestion{
     add(data){
        if(this.myForm.valid){
         //    console.log(data);
-            this.db.list("Exam").push(data).then(res=>console.log("success")).catch(exp=>console.log(exp))
+            this.db.list("Exam").push(data).then(res =>{
+            this.myForm.reset()
+            alert("success")
+        }).catch(exp=>console.log(exp))
+           
        }else{
            this.dialog.open(AlertMsg,{data:"Please Enter Valid Input"});
        }
+
     }
 }
